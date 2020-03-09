@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import styled from "styled-components"
 
 import { rhythm, scale } from "../utils/typography"
 
@@ -54,7 +53,7 @@ class Layout extends React.Component {
       )
     }
     return (
-      <Wrapper>
+      <div>
         <div
           style={{
             marginLeft: `auto`,
@@ -66,23 +65,14 @@ class Layout extends React.Component {
           <header>{header}</header>
           <main>{children}</main>
         </div>
-        <Footer>
+        <div>
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </Footer>
-      </Wrapper>
+        </div>
+      </div>
     )
   }
 }
-
-const Wrapper = styled.div`
-  min-height: 100vh;
-`
-
-const Footer = styled.footer`
-  text-align: center;
-  margin: 24px;
-`
 
 export default Layout
