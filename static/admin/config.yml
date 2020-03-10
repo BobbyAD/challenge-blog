@@ -1,5 +1,5 @@
 backend:
-  name: challenge-blog
+  name: git-gateway
 
 media_folder: static/assets
 public_folder: assets
