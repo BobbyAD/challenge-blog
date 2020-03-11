@@ -2,16 +2,10 @@ import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 
 import Bio from "./bio"
-import SEO from "./seo"
-import { rhythm } from "../utils/typography"
-import Button from "./button"
 
-import { useSiteMetadata } from "../queries/useSiteMetadata"
 import { useBlogs } from "../queries/useBlogs"
 
 const Blog = () => {
-    const siteMetaData = useSiteMetadata()
-    const siteTitle = siteMetaData.title
     const posts = useBlogs()
 
     return (
@@ -22,11 +16,7 @@ const Blog = () => {
                     const title = node.frontmatter.title || node.fields.slug
                     return (
                         <div key={node.fields.slug}>
-                            <h3
-                                style={{
-                                    marginBottom: rhythm(1 / 4),
-                                }}
-                            >
+                            <h3>
                                 <Link
                                     style={{ boxShadow: `none` }}
                                     to={`${node.fields.slug}`}
