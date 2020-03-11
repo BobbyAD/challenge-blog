@@ -1,20 +1,21 @@
 import React from "react"
 
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Button from "../components/button"
 import Blog from "../components/blog"
 
-class IndexPage extends React.Component {
-    render() {
-        const siteTitle = "Gatsby Starter Personal Website"
+import { ThemeProvider } from "react-jss"
 
-        return (
-            <Layout location={this.props.location} title={siteTitle}>
-                <Blog />
-            </Layout>
-        )
-    }
+const IndexPage = () => {
+    const theme = {}
+    const siteTitle = "Bobby's Coding Blog"
+
+    return (
+        <ThemeProvider theme={theme}>
+            <div>{`${siteTitle}`}</div>
+            <Blog />
+        </ThemeProvider>
+    )
 }
 
 export default IndexPage

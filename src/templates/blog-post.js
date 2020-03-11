@@ -3,7 +3,6 @@ import { Link, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import Bio from "../components/bio"
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 
@@ -14,7 +13,7 @@ class BlogPostTemplate extends React.Component {
         const { previous, next } = this.props.pageContext
 
         return (
-            <Layout location={this.props.location} title={siteTitle}>
+            <>
                 <SEO
                     title={post.frontmatter.title}
                     description={post.frontmatter.description || post.excerpt}
@@ -49,20 +48,20 @@ class BlogPostTemplate extends React.Component {
                 >
                     <li>
                         {previous && (
-                            <Link to={`blog${previous.fields.slug}`} rel="prev">
+                            <Link to={`${previous.fields.slug}`} rel="prev">
                                 ← {previous.frontmatter.title}
                             </Link>
                         )}
                     </li>
                     <li>
                         {next && (
-                            <Link to={`blog${next.fields.slug}`} rel="next">
+                            <Link to={`${next.fields.slug}`} rel="next">
                                 {next.frontmatter.title} →
                             </Link>
                         )}
                     </li>
                 </ul>
-            </Layout>
+            </>
         )
     }
 }

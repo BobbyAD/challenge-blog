@@ -2,7 +2,6 @@ import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 
 import Bio from "./bio"
-import Layout from "./layout"
 import SEO from "./seo"
 import { rhythm } from "../utils/typography"
 import Button from "./button"
@@ -17,7 +16,6 @@ const Blog = () => {
 
     return (
         <>
-            <SEO title="All posts" />
             <Bio />
             <div style={{ margin: "20px 0 40px" }}>
                 {posts.map(({ node }) => {
@@ -31,7 +29,7 @@ const Blog = () => {
                             >
                                 <Link
                                     style={{ boxShadow: `none` }}
-                                    to={`blog${node.fields.slug}`}
+                                    to={`${node.fields.slug}`}
                                 >
                                     {title}
                                 </Link>
@@ -48,9 +46,6 @@ const Blog = () => {
                     )
                 })}
             </div>
-            <Link to="/">
-                <Button marginTop="85px">Go Home</Button>
-            </Link>
         </>
     )
 }
