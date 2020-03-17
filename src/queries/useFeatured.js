@@ -5,7 +5,7 @@ export const useFeatured = () => {
         query featuredQuery {
             allMdx(
                 sort: { fields: [frontmatter___date], order: DESC }
-                filter: { frontmatter: { featured: { eq: "true" } } }
+                filter: { frontmatter: { featured: { eq: true } } }
             ) {
                 edges {
                     node {

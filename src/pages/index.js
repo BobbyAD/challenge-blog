@@ -9,6 +9,7 @@ import "../styles/reset.css"
 import "../styles/fonts.css"
 
 import { ThemeProvider } from "react-jss"
+import Featured from "../components/featured"
 
 const IndexPage = () => {
     const theme = {}
@@ -19,7 +20,10 @@ const IndexPage = () => {
         <ThemeProvider theme={theme}>
             <div className={classes.container}>
                 <div className={classes.title}>{`${siteTitle}`}</div>
+                BLOG
                 <Blog />
+                FEATURED
+                <Featured />
             </div>
         </ThemeProvider>
     )

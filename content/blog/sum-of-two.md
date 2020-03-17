@@ -3,7 +3,7 @@ path: sum-of-two-31020
 date: 2020-03-10T21:33:52.333Z
 title: Sum Of Two
 description: Find two numbers from array a and array b whose sum equals v.
-featured: false
+featured: true
 ---
 The easiest solution is to loop through each array, and check each combination for a match to _v_.
 
