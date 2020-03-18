@@ -10,6 +10,7 @@ import "../styles/fonts.css"
 
 import { ThemeProvider } from "react-jss"
 import Featured from "../components/featured"
+import Bio from "../components/bio"
 
 const IndexPage = () => {
     const theme = {}
@@ -20,6 +21,10 @@ const IndexPage = () => {
         <ThemeProvider theme={theme}>
             <div className={classes.container}>
                 <div className={classes.title}>{`${siteTitle}`}</div>
+                <div>
+                    <p>Description goes here</p>
+                    <Bio />
+                </div>
                 BLOG
                 <Blog />
                 FEATURED

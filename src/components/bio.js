@@ -26,9 +26,8 @@ function Bio() {
                         />
                         <p>
                             Written by <strong>{author}</strong>.{` `}
-                            <a href={`https://twitter.com/${social.twitter}`}>
-                                You should follow him on Twitter
-                            </a>
+                            Check out my{" "}
+                            <a href={`${social.website}`}>website</a>!
                         </p>
                     </div>
                 )
@@ -50,7 +49,7 @@ const bioQuery = graphql`
             siteMetadata {
                 author
                 social {
-                    twitter
+                    website
                 }
             }
         }

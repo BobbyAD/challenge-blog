@@ -1,7 +1,5 @@
 import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
-
-import Bio from "./bio"
+import { Link } from "gatsby"
 
 import { useBlogs } from "../queries/useBlogs"
 
@@ -10,7 +8,6 @@ const Blog = () => {
 
     return (
         <>
-            <Bio />
             <div style={{ margin: "20px 0 40px" }}>
                 {posts.map(({ node }) => {
                     const title = node.frontmatter.title || node.fields.slug

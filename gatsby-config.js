@@ -6,7 +6,7 @@ module.exports = {
         description: `Bobby's code blog. Mostly code challenge solutions.`,
         siteUrl: `https://blog.bobbyad.dev`,
         social: {
-            twitter: `123BobbyAD`,
+            website: `https://bobbyad.dev`,
         },
     },
     plugins: [
