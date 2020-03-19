@@ -15,14 +15,12 @@ import Bio from "../components/bio"
 
 const IndexPage = () => {
     const theme = {}
-    const siteTitle = "Bobby's Coding Blog"
     const classes = indexStyles()
 
     return (
         <ThemeProvider theme={theme}>
             <Layout>
                 <div className={classes.container}>
-                    <div className={classes.title}>{`${siteTitle}`}</div>
                     <div>
                         <p>Description goes here</p>
                         <Bio />
