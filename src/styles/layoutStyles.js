@@ -1,9 +1,16 @@
 import { createUseStyles } from "react-jss"
 
 export default createUseStyles({
-    container: {
+    bigContainer: {
+        width: "100%",
         minHeight: "100vh",
-        background: "#123",
+        background: "#fbfbfb",
         display: "flex",
+        flexDirection: 'column',
+        alignItems: 'center',
+    },
+    container: {
+        width: "75%",
+        maxWidth: "1024px",
     }
 })

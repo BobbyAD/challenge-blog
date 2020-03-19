@@ -1,20 +1,19 @@
 import React from "react"
+import { ThemeProvider } from "react-jss"
 
 import SEO from "../components/seo"
-import Button from "../components/button"
 import Blog from "../components/blog"
-import indexStyles from "../styles/indexStyles"
 import Layout from "../layout/layout"
-
-import "../styles/reset.css"
-import "../styles/fonts.css"
-
-import { ThemeProvider } from "react-jss"
 import Featured from "../components/featured"
 import Bio from "../components/bio"
 
+import "../styles/reset.css"
+import "../styles/fonts.css"
+import indexStyles from "../styles/indexStyles"
+import theme from "../styles/theme"
+
+
 const IndexPage = () => {
-    const theme = {}
     const classes = indexStyles()
 
     return (

@@ -2,6 +2,8 @@ import { createUseStyles } from "react-jss";
 
 export default createUseStyles({
     container: {
-        color: "red",
+        display: 'flex',
+        width: "100%",
+        justifyContent: 'space-between',
     }
 })

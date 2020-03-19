@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 
 import Header from "../components/header"
 
@@ -8,13 +8,13 @@ const Layout = ({ children }) => {
     const classes = layoutStyles()
 
     return (
-        <div className={classes.container}>
-            <Header />
-            <main>{children}</main>
+        <div className={classes.bigContainer}>
+            <div className={classes.container}>
+                <Header />
+                <main>{children}</main>
+            </div>
         </div>
     )
 }
-
-
 
 export default Layout
