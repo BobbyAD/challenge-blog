@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import Button from "../components/button"
 import Blog from "../components/blog"
 import indexStyles from "../styles/indexStyles"
+import Layout from "../layout/layout"
 
 import "../styles/reset.css"
 import "../styles/fonts.css"
@@ -19,17 +20,19 @@ const IndexPage = () => {
 
     return (
         <ThemeProvider theme={theme}>
-            <div className={classes.container}>
-                <div className={classes.title}>{`${siteTitle}`}</div>
-                <div>
-                    <p>Description goes here</p>
-                    <Bio />
+            <Layout>
+                <div className={classes.container}>
+                    <div className={classes.title}>{`${siteTitle}`}</div>
+                    <div>
+                        <p>Description goes here</p>
+                        <Bio />
+                    </div>
+                    BLOG
+                    <Blog />
+                    FEATURED
+                    <Featured />
                 </div>
-                BLOG
-                <Blog />
-                FEATURED
-                <Featured />
-            </div>
+            </Layout>
         </ThemeProvider>
     )
 }
