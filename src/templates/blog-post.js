@@ -11,6 +11,7 @@ class BlogPostTemplate extends React.Component {
         const post = this.props.data.mdx
         const siteTitle = this.props.data.site.siteMetadata.title
         const { previous, next } = this.props.pageContext
+        
 
         return (
             <Layout>
@@ -20,7 +21,7 @@ class BlogPostTemplate extends React.Component {
                 />
                 <h1>{post.frontmatter.title}</h1>
                 <p>{post.frontmatter.date}</p>
-                <MDXRenderer>{post.body}</MDXRenderer>
+                    <MDXRenderer>{post.body}</MDXRenderer>
                 <hr />
                 <Bio />
 

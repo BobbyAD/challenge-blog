@@ -8,8 +8,8 @@
         "url": "https://github.com/gatsbyjs/gatsby/issues"
     },
     "dependencies": {
-        "@mdx-js/mdx": "^1.5.1",
-        "@mdx-js/react": "^1.5.1",
+        "@mdx-js/mdx": "^1.5.7",
+        "@mdx-js/react": "^1.5.7",
         "gatsby": "^2.3.25",
         "gatsby-image": "^2.0.39",
         "gatsby-plugin-feed-mdx": "^1.0.0",
@@ -32,7 +32,8 @@
         "react-dom": "^16.8.6",
         "react-helmet": "^5.2.0",
         "react-jss": "^10.0.4",
-        "react-switch": "^5.0.0"
+        "react-switch": "^5.0.0",
+        "webpack": "^4.42.0"
     },
     "devDependencies": {
         "prettier": "^1.17.0"
