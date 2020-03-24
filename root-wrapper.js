@@ -1,15 +1,28 @@
-import { MDXProvider } from "@mdx-js/react"
-
 import React from "react"
 
-const components = {
-    p: ({ children }) => (
-        <h2 style={{ color: "rebeccapurple" }}>{children}</h2>
-    ),
+import { MDXProvider } from "@mdx-js/react"
 
-    code: props => (
-        <code style={{ backgroundColor: "lightgray" }} {...props} />
-    ),
+import { P, Code, CodeWrapper } from "./src/styles/mdx"
+
+const components = {
+    p: props => <P {...props} />,
+    pre: ({ children: { props } }) => {
+        console.log(props.children)
+        if (props.mdxType === "code") {
+            return (
+                <div>
+                    <Code
+                        codeString={props.children.trim()}
+                        language={
+                            props.className &&
+                            props.className.replace("language-", "")
+                        }
+                        {...props}
+                    />
+                </div>
+            )
+        }
+    },
 }
 
 export const wrapRootElement = ({ element }) => (
