@@ -1,9 +1,3 @@
 import React from 'react'
 
-export const P = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+export const P = (props) => <p {...props} />
