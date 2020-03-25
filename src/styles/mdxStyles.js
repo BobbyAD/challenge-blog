@@ -5,12 +5,13 @@ export default createUseStyles({
         padding: "1rem",
         fontFamily: "'Source Code Pro', monospace",
         margin: "1rem 0",
+        borderRadius: "8px",
     },
     p: {
         margin: "1rem 0",
         '& a': {
             color: "#2373f0",
-            fontWeight: "700",
+            fontWeight: "800",
             padding: ".15rem",
             margin: "-.15rem",
             borderRadius: "3px",
