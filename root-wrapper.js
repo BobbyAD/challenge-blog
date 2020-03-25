@@ -8,7 +8,6 @@ const components = {
     wrapper: ({ children }) => <>{children}</>,
     p: props => <P {...props} />,
     pre: ({ children: { props } }) => {
-        console.log(props.children)
         if (props.mdxType === "code") {
             return (
                 <div>
@@ -24,17 +23,6 @@ const components = {
             )
         }
     },
-    // pre: ({ children: { props } }) => {
-    //     console.log(props)
-    //     return (
-    //         <Code
-    //             language={
-    //                 props.className && props.className.replace("language-", "")
-    //             }
-    //             {...props}
-    //         />
-    //     )
-    // },
 }
 
 export const wrapRootElement = ({ element }) => (
