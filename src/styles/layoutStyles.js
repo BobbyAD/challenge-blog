@@ -8,6 +8,7 @@ export default createUseStyles({
         display: "flex",
         flexDirection: 'column',
         alignItems: 'center',
+        //Global Text Stuff
         lineHeight: "1.5",
         letterSpacing: ".03rem",
     },

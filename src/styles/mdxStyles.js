@@ -5,6 +5,19 @@ export default createUseStyles({
         padding: "1rem",
         fontFamily: "'Source Code Pro', monospace",
         margin: "1rem 0",
+    },
+    p: {
+        margin: "1rem 0",
+        '& a': {
+            color: "#2373f0",
+            fontWeight: "700",
+            padding: ".15rem",
+            margin: "-.15rem",
+            borderRadius: "3px",
+            '&:hover': {
+                background: "#d0f7ff"
+            }
+        }
     }
 })
 

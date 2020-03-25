@@ -1,9 +1,10 @@
 export default {
     clickable: {
-        transition: "500ms",
-        borderRadius: "10px",
+        transition: "300ms",
+        borderRadius: "5px",
+        textDecoration: "underline",
         '&:hover': {
-            background: "#ccc",
+            background: "#eee",
         }
     }
 }

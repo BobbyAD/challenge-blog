@@ -13,7 +13,6 @@ export default createUseStyles(theme => ({
         "& *": {
             ...theme.clickable,
             padding: ".8rem",
-            textDecoration: 'none',
             color: "#000",
         },
         "& :first-child": {

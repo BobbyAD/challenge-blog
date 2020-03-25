@@ -1,5 +1,4 @@
 import React from "react"
-import { ThemeProvider } from "react-jss"
 
 import SEO from "../components/seo"
 import Blog from "../components/blog"
@@ -10,14 +9,12 @@ import Bio from "../components/bio"
 import "../styles/reset.css"
 import "../styles/fonts.css"
 import indexStyles from "../styles/indexStyles"
-import theme from "../styles/theme"
 
 
 const IndexPage = () => {
     const classes = indexStyles()
 
     return (
-        <ThemeProvider theme={theme}>
             <Layout>
                 <div className={classes.container}>
                     <div>
@@ -30,7 +27,6 @@ const IndexPage = () => {
                     <Featured />
                 </div>
             </Layout>
-        </ThemeProvider>
     )
 }
 
