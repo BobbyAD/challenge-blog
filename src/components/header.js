@@ -13,8 +13,8 @@ const Header = () => {
         <div className={classes.container}>
             <div className={classes.title}>{meta.title}</div>
             <div className={classes.links}>
-                <a href="https://portfolio.bobbyad.dev">Portfolio</a>
                 <Link to="/">Home</Link>
+                <a href="https://portfolio.bobbyad.dev">Portfolio</a>
             </div>
         </div>
     )

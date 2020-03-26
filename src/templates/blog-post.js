@@ -4,26 +4,22 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import Bio from "../components/bio"
 import SEO from "../components/seo"
-import Layout from "../layout/layout"
 
 class BlogPostTemplate extends React.Component {
     render() {
         const post = this.props.data.mdx
         const siteTitle = this.props.data.site.siteMetadata.title
         const { previous, next } = this.props.pageContext
-        
 
         return (
-            <Layout>
+            <>
                 <SEO
                     title={post.frontmatter.title}
                     description={post.frontmatter.description || post.excerpt}
                 />
                 <h1>{post.frontmatter.title}</h1>
                 <p>{post.frontmatter.date}</p>
-                    <MDXRenderer>{post.body}</MDXRenderer>
-                <hr />
-                <Bio />
+                <MDXRenderer>{post.body}</MDXRenderer>
 
                 <ul>
                     <li>
@@ -41,7 +37,7 @@ class BlogPostTemplate extends React.Component {
                         )}
                     </li>
                 </ul>
-            </Layout>
+            </>
         )
     }
 }

@@ -7,6 +7,7 @@ module.exports = {
         siteUrl: `https://blog.bobbyad.dev`,
         social: {
             website: `https://bobbyad.dev`,
+            linkedin: `https://www.linkedin.com/in/bobbyad/`
         },
     },
     plugins: [

@@ -1,6 +1,6 @@
 import { createUseStyles } from "react-jss"
 
-export default createUseStyles({
+export default createUseStyles(theme => ({
     codeContainer: {
         padding: "1rem",
         fontFamily: "'Source Code Pro', monospace",
@@ -10,17 +10,10 @@ export default createUseStyles({
     p: {
         margin: "1rem 0",
         '& a': {
-            color: "#2373f0",
-            fontWeight: "800",
-            padding: ".15rem",
-            margin: "-.15rem",
-            borderRadius: "3px",
-            '&:hover': {
-                background: "#d0f7ff"
-            }
+            ...theme.blueLink
         }
     }
-})
+}))
 
 
 export const codeTheme = {

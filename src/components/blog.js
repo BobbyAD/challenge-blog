@@ -3,8 +3,11 @@ import { Link } from "gatsby"
 
 import { useBlogs } from "../queries/useBlogs"
 
+import mainBlogStyles from "../styles/mainBlogStyles"
+
 const Blog = () => {
     const posts = useBlogs()
+    const classes = mainBlogStyles()
 
     return (
         <>
@@ -15,20 +18,14 @@ const Blog = () => {
                         <div key={node.fields.slug}>
                             <h3>
                                 <Link
-                                    style={{ boxShadow: `none` }}
+                                    className={classes.link}
                                     to={`${node.fields.slug}`}
                                 >
                                     {title}
                                 </Link>
                             </h3>
                             <small>{node.frontmatter.date}</small>
-                            <p
-                                dangerouslySetInnerHTML={{
-                                    __html:
-                                        node.frontmatter.description ||
-                                        node.excerpt,
-                                }}
-                            />
+                            <p>{node.frontmatter.description}</p>
                         </div>
                     )
                 })}

@@ -1,33 +1,30 @@
-/**
- * Bio component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 
+import bioStyles from "../styles/bioStyles"
+
 function Bio() {
+    const classes = bioStyles()
+
     return (
         <StaticQuery
             query={bioQuery}
             render={data => {
                 const { author, social } = data.site.siteMetadata
                 return (
-                    <div>
+                    <div className={classes.container}>
                         <Image
                             fixed={data.avatar.childImageSharp.fixed}
-                            alt={author}
-                            imgStyle={{
-                                borderRadius: `50%`,
-                            }}
+                            alt={`Image of ${author}`}
+                            className={classes.image}
                         />
                         <p>
-                            Written by <strong>{author}</strong>.{` `}
+                            Hey, I'm <strong>{author}</strong>.{` `}
                             Check out my{" "}
-                            <a href={`${social.website}`}>website</a>!
+                            <a href={`${social.website}`}>website</a>
+                            , or follow my{" "}
+                            <a href={`${social.linkedin}`}>LinkedIn</a>
                         </p>
                     </div>
                 )

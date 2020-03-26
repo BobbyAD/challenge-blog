@@ -4,16 +4,12 @@ export default createUseStyles(theme => ({
     container: {
         display: "flex",
         flexDirection: 'column',
-    },
-    topDiv: {
-        display: "flex",
-    },
-    description: {
-        width: "60%",
+        width: "40%",
         "& a": {
             ...theme.blueLink
         }
+    },
+    image: {
+        width: "100%",
     }
 }))
-
-

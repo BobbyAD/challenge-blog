@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
             <div className={classes.bigContainer}>
                 <div className={classes.container}>
                     <Header />
-                    <main>{children}</main>
+                    <main className={classes.main}>{children}</main>
                 </div>
             </div>
         </ThemeProvider>
