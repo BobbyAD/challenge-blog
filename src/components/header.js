@@ -11,7 +11,9 @@ const Header = () => {
 
     return (
         <div className={classes.container}>
-            <div className={classes.title}>{meta.title}</div>
+            <div className={classes.title}>
+                <Link to="/">{meta.title}</Link>
+            </div>
             <div className={classes.links}>
                 <Link to="/">Home</Link>
                 <a href="https://portfolio.bobbyad.dev">Portfolio</a>

@@ -1,12 +1,15 @@
 import { createUseStyles } from "react-jss"
 
 export default createUseStyles(theme => ({
+    container: {
+        display: 'flex',
+        flexDirection: 'column',
+        margin: "1rem 0 1rem",
+    },
+    title: {
+        marginBottom: "1rem",
+    },
     link: {
-        textDecoration: "none",
-        color: "red",
-        border: "1px solid red",
-        '& a': {
-            color: "red"
-        }
+        ...theme.blueLink
     }
 }))

@@ -4,12 +4,17 @@ export default createUseStyles(theme => ({
     container: {
         display: "flex",
         flexDirection: 'column',
-        width: "40%",
+        width: "100%",
+        fontSize: "1.1rem",
+        marginBottom: "2rem",
         "& a": {
-            ...theme.blueLink
+            ...theme.blueLink,
+        },
+        "& strong": {
+            fontWeight: "800",
+        },
+        "& p": {
+            marginTop: "1.4rem",
         }
     },
-    image: {
-        width: "100%",
-    }
 }))

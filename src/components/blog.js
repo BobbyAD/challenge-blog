@@ -10,27 +10,26 @@ const Blog = () => {
     const classes = mainBlogStyles()
 
     return (
-        <>
-            <div style={{ margin: "20px 0 40px" }}>
-                {posts.map(({ node }) => {
-                    const title = node.frontmatter.title || node.fields.slug
-                    return (
-                        <div key={node.fields.slug}>
-                            <h3>
-                                <Link
-                                    className={classes.link}
-                                    to={`${node.fields.slug}`}
-                                >
-                                    {title}
-                                </Link>
-                            </h3>
-                            <small>{node.frontmatter.date}</small>
-                            <p>{node.frontmatter.description}</p>
-                        </div>
-                    )
-                })}
-            </div>
-        </>
+        <div className={classes.container}>
+            <h2 className={classes.title}>Blog</h2>
+            {posts.map(({ node }) => {
+                const title = node.frontmatter.title || node.fields.slug
+                return (
+                    <div key={node.fields.slug}>
+                        <h4>
+                            <Link
+                                className={classes.link}
+                                to={`${node.fields.slug}`}
+                            >
+                                {title}
+                            </Link>
+                        </h4>
+                        <small>{node.frontmatter.date}</small>
+                        <p>{node.frontmatter.description}</p>
+                    </div>
+                )
+            })}
+        </div>
     )
 }
 

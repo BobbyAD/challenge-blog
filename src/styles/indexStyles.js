@@ -8,12 +8,6 @@ export default createUseStyles(theme => ({
     topDiv: {
         display: "flex",
     },
-    description: {
-        width: "60%",
-        "& a": {
-            ...theme.blueLink
-        }
-    }
 }))
 
 

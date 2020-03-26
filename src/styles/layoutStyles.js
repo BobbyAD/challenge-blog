@@ -21,6 +21,9 @@ export default createUseStyles({
         "& h3": {
             fontSize: "1.6rem",
         },
+        "& h4": {
+            fontSize: "1.3rem",
+        },
         "& small": {
             fontSize: ".9rem",
             color: "#333"

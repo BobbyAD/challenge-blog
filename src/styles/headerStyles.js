@@ -5,8 +5,18 @@ export default createUseStyles(theme => ({
         display: "flex",
         width: "100%",
         justifyContent: "space-between",
-        alignItems: 'center',
+        alignItems: "center",
         margin: "5% 0",
+    },
+    title: {
+        display: "flex",
+        "& a": {
+            ...theme.clickable,
+            padding: ".8rem",
+            marginLeft: "-.8rem",
+            color: "#000",
+            textDecoration: "none",
+        },
     },
     links: {
         display: "flex",
@@ -18,6 +28,6 @@ export default createUseStyles(theme => ({
         "& :first-child": {
             marginLeft: "-8%",
             marginRight: "8%",
-        }
+        },
     },
 }))
