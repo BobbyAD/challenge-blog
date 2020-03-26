@@ -26,9 +26,7 @@ const components = {
 }
 
 export const wrapRootElement = ({ element }) => (
-    <MDXProvider components={components}>
-        <Layout>
-            {element}
-        </Layout>
-    </MDXProvider>
+    <Layout>
+        <MDXProvider components={components}>{element}</MDXProvider>
+    </Layout>
 )
