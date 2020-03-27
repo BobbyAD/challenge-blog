@@ -11,6 +11,7 @@ module.exports = {
         },
     },
     plugins: [
+        `gatsby-plugin-jss`,
         `gatsby-plugin-netlify-cms`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
