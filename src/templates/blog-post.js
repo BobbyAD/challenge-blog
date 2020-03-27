@@ -2,7 +2,6 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
-import Layout from "../layout/layout"
 import SEO from "../components/seo"
 
 import blogStyles from "../styles/blogStyles"
@@ -14,17 +13,15 @@ const BlogPostTemplate = props => {
     const classes = blogStyles()
 
     return (
-        <Layout>
-            <div className={classes.container}>
-                <SEO
-                    title={post.frontmatter.title}
-                    description={post.frontmatter.description || post.excerpt}
-                />
-                <h1>{post.frontmatter.title}</h1>
-                <p>{post.frontmatter.date}</p>
-                <MDXRenderer>{post.body}</MDXRenderer>
-            </div>
-        </Layout>
+        <div className={classes.container}>
+            <SEO
+                title={post.frontmatter.title}
+                description={post.frontmatter.description || post.excerpt}
+            />
+            <h1>{post.frontmatter.title}</h1>
+            <p>{post.frontmatter.date}</p>
+            <MDXRenderer>{post.body}</MDXRenderer>
+        </div>
     )
 }
 

@@ -1,8 +1,13 @@
 import React from "react"
+import { ThemeProvider } from "react-jss"
+import theme from "./src/styles/theme"
 import { MDXProvider } from "@mdx-js/react"
 
 import { P, Code, CodeWrapper } from "./src/styles/mdx"
+import Layout from "./src/layout/layout"
 
+import "./src/styles/reset.css"
+import "./src/styles/fonts.css"
 
 const components = {
     wrapper: ({ children }) => <>{children}</>,
@@ -26,5 +31,9 @@ const components = {
 }
 
 export const wrapRootElement = ({ element }) => (
-        <MDXProvider components={components}>{element}</MDXProvider>
+    <ThemeProvider theme={theme}>
+        <MDXProvider components={components}>
+            <Layout>{element}</Layout>
+        </MDXProvider>
+    </ThemeProvider>
 )
