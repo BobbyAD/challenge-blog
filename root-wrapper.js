@@ -4,9 +4,6 @@ import { MDXProvider } from "@mdx-js/react"
 import { P, Code, CodeWrapper } from "./src/styles/mdx"
 import Layout from "./src/layout/layout"
 
-import "./src/styles/reset.css"
-import "./src/styles/fonts.css"
-
 const components = {
     wrapper: ({ children }) => <>{children}</>,
     p: props => <P {...props} />,
