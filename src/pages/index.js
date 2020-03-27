@@ -1,8 +1,5 @@
 import React from "react"
 
-import "../styles/reset.css"
-import "../styles/fonts.css"
-
 import { ThemeProvider } from "react-jss"
 import theme from "../styles/theme"
 
