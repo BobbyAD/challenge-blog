@@ -1,5 +1,8 @@
 import React from "react"
 
+import "../styles/reset.css"
+import "../styles/fonts.css"
+
 import Header from "../components/header"
 
 import layoutStyles from "../styles/layoutStyles"
