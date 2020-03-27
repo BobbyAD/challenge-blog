@@ -32,5 +32,8 @@ export default createUseStyles({
     container: {
         width: "75%",
         maxWidth: "1024px",
+        "@media (max-width: 650px)": {
+            width: "90%",
+        }
     },
 })
