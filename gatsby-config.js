@@ -14,7 +14,6 @@ module.exports = {
         `gatsby-plugin-netlify-cms`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
-        `gatsby-plugin-offline`,
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-feed-mdx`,
         {
