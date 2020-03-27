@@ -77,7 +77,12 @@ function SEO({ description, lang, meta, keywords, title }) {
                         : []
                 )
                 .concat(meta)}
-        />
+        >
+            <link
+                href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&family=Source+Sans+Pro:wght@400;700&display=swap"
+                rel="stylesheet"
+            />
+        </Helmet>
     )
 }
 

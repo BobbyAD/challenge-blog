@@ -9,14 +9,18 @@ import theme from "../styles/theme"
 import Layout from "../layout/layout"
 
 import Main from "../components/main"
+import SEO from "../components/seo"
 
 const IndexPage = () => {
     return (
-        <ThemeProvider theme={theme}>
-            <Layout>
-                <Main />
-            </Layout>
-        </ThemeProvider>
+        <>
+            <SEO />
+            <ThemeProvider theme={theme}>
+                <Layout>
+                    <Main />
+                </Layout>
+            </ThemeProvider>
+        </>
     )
 }
 
