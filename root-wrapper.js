@@ -1,5 +1,8 @@
 import React from "react"
+import { ThemeProvider } from "react-jss"
 import { MDXProvider } from "@mdx-js/react"
+
+import {theme} from "./src/styles/theme"
 
 import { P, Code, CodeWrapper } from "./src/styles/mdx"
 
@@ -25,5 +28,7 @@ const components = {
 }
 
 export const wrapRootElement = ({ element }) => (
+    <ThemeProvider theme={theme}>
         <MDXProvider components={components}>{element}</MDXProvider>
+    </ThemeProvider>
 )
