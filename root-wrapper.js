@@ -1,8 +1,6 @@
 import React from "react"
 import { ThemeProvider } from "react-jss"
 import { MDXProvider } from "@mdx-js/react"
-import "./src/styles/reset.css"
-import "./src/styles/fonts.css"
 
 import {theme} from "./src/styles/theme"
 
