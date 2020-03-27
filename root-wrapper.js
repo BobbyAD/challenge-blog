@@ -6,6 +6,9 @@ import {theme} from "./src/styles/theme"
 
 import { P, Code, CodeWrapper } from "./src/styles/mdx"
 
+import "./src/styles/reset.css"
+import "./src/styles/fonts.css"
+
 const components = {
     wrapper: ({ children }) => <>{children}</>,
     p: props => <P {...props} />,
