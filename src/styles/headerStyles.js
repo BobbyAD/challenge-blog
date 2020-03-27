@@ -10,12 +10,19 @@ export default createUseStyles(theme => ({
     },
     title: {
         display: "flex",
+        fontWeight: "800",
         "& a": {
             ...theme.clickable,
             padding: ".8rem",
             marginLeft: "-.8rem",
             color: "#000",
             textDecoration: "none",
+            display: "flex",
+            alignItems:"center",
+            justifyContent: 'center',
+            "& span:nth-child(2)": {
+                marginBottom: "-.25rem",
+            }
         },
     },
     links: {

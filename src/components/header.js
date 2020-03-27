@@ -12,7 +12,11 @@ const Header = () => {
     return (
         <div className={classes.container}>
             <div className={classes.title}>
-                <Link to="/">{meta.title}</Link>
+                <Link to="/">
+                    <span>{`<`}</span>
+                    <span>{`/`}</span>
+                    <span>{`>`}</span>
+                </Link>
             </div>
             <div className={classes.links}>
                 <Link to="/">Home</Link>

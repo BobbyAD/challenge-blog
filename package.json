@@ -1,11 +1,11 @@
 {
-    "name": "gatsby-personal-starter-blog",
+    "name": "challenge-blog",
     "private": true,
-    "description": "A personal blog starter for a blog powered by Netlify CMS, based on the default blog starter",
+    "description": "A code blog",
     "version": "1.0.0",
-    "author": "Thomas Wang <thomas@wang.sh>",
+    "author": "Bobby Driskell",
     "bugs": {
-        "url": "https://github.com/gatsbyjs/gatsby/issues"
+        "url": "https://github.com/BobbyAD/challenge-blog/issues"
     },
     "dependencies": {
         "@mdx-js/mdx": "^1.5.7",
@@ -39,7 +39,7 @@
     "devDependencies": {
         "prettier": "^1.17.0"
     },
-    "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+    "homepage": "https://blog.bobbyad.dev/",
     "keywords": [
         "gatsby"
     ],
@@ -47,7 +47,7 @@
     "main": "n/a",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+        "url": "https://github.com/BobbyAD/challenge-blog"
     },
     "scripts": {
         "build": "gatsby build",

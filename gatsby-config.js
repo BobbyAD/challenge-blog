@@ -1,7 +1,7 @@
 module.exports = {
     siteMetadata: {
         // edit below
-        title: `Code Blog`,
+        title: `Bobby's Code Blog`,
         author: `Bobby Driskell`,
         description: `Bobby's code blog. Mostly code challenge solutions.`,
         siteUrl: `https://blog.bobbyad.dev`,
@@ -70,8 +70,8 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `Gatsby Starter Blog`,
-                short_name: `GatsbyJS`,
+                name: `Challenge Blog`,
+                short_name: `CodeBlog`,
                 start_url: `/`,
                 background_color: `#ffffff`,
                 theme_color: `#663399`,
