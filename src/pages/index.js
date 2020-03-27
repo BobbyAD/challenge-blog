@@ -1,8 +1,5 @@
 import React from "react"
 
-import { ThemeProvider } from "react-jss"
-import theme from "../styles/theme"
-
 import Layout from "../layout/layout"
 
 import Main from "../components/main"
@@ -12,11 +9,9 @@ const IndexPage = () => {
     return (
         <>
             <SEO />
-            <ThemeProvider theme={theme}>
-                <Layout>
-                    <Main />
-                </Layout>
-            </ThemeProvider>
+            <Layout>
+                <Main />
+            </Layout>
         </>
     )
 }
