@@ -1,7 +1,7 @@
 import React from "react"
 
-import "../styles/reset.css"
-import "../styles/fonts.css"
+import { ThemeProvider } from "react-jss"
+import {theme} from "../styles/theme"
 
 import Header from "../components/header"
 
@@ -11,12 +11,14 @@ const Layout = ({ children }) => {
     const classes = layoutStyles()
 
     return (
+        <ThemeProvider theme={theme}>
             <div className={classes.bigContainer}>
                 <div className={classes.container}>
                     <Header />
                     <main className={classes.main}>{children}</main>
                 </div>
             </div>
+        </ThemeProvider>
     )
 }
 
