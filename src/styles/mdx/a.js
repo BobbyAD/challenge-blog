@@ -1,9 +1,11 @@
 import React from 'react'
 
-export const a = () => {
+import mdxStyles from "../mdxStyles"
+
+export const A = props => {
+    const classes = mdxStyles()
+
     return (
-        <div>
-            
-        </div>
+        <a {...props} className={classes.a} />
     )
 }
