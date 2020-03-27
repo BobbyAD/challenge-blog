@@ -15,6 +15,9 @@ export default createUseStyles(theme => ({
                 marginRight: "2rem",
             },
         },
+        "@media (max-width: 650px)": {
+            fontSize: ".8rem",
+        }
     },
     p: {
         margin: "1rem 0",
