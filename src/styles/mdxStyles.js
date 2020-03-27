@@ -2,19 +2,27 @@ import { createUseStyles } from "react-jss"
 
 export default createUseStyles(theme => ({
     codeContainer: {
-        padding: "1rem",
+        display: "flex",
+        flexDirection: "column",
+        overflowY: "auto",
+        padding: "1rem 0 1rem 1rem",
         fontFamily: "'Source Code Pro', monospace",
         margin: "1rem 0",
         borderRadius: "8px",
+        // Allows for a little over-scroll
+        "& .token-line": {
+            "& span:last-child": {
+                marginRight: "2rem",
+            },
+        },
     },
     p: {
         margin: "1rem 0",
-        '& a': {
-            ...theme.blueLink
-        }
-    }
+    },
+    a: {
+        ...theme.blueLink,
+    },
 }))
-
 
 export const codeTheme = {
     plain: {
