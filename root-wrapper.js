@@ -2,7 +2,6 @@ import React from "react"
 import { MDXProvider } from "@mdx-js/react"
 
 import { P, Code, CodeWrapper } from "./src/styles/mdx"
-import Layout from "./src/layout/layout"
 
 const components = {
     wrapper: ({ children }) => <>{children}</>,
@@ -26,7 +25,5 @@ const components = {
 }
 
 export const wrapRootElement = ({ element }) => (
-    <MDXProvider components={components}>
-        <Layout>{element}</Layout>
-    </MDXProvider>
+    <MDXProvider components={components}>{element}</MDXProvider>
 )

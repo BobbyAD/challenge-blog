@@ -5,6 +5,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import SEO from "../components/seo"
 
 import blogStyles from "../styles/blogStyles"
+import Layout from "../layout/layout"
 
 const BlogPostTemplate = props => {
     const post = props.data.mdx
@@ -13,15 +14,17 @@ const BlogPostTemplate = props => {
     const classes = blogStyles()
 
     return (
-        <div className={classes.container}>
-            <SEO
-                title={post.frontmatter.title}
-                description={post.frontmatter.description || post.excerpt}
-            />
-            <h1>{post.frontmatter.title}</h1>
-            <p>{post.frontmatter.date}</p>
-            <MDXRenderer>{post.body}</MDXRenderer>
-        </div>
+        <Layout>
+            <div className={classes.container}>
+                <SEO
+                    title={post.frontmatter.title}
+                    description={post.frontmatter.description || post.excerpt}
+                />
+                <h1>{post.frontmatter.title}</h1>
+                <p>{post.frontmatter.date}</p>
+                <MDXRenderer>{post.body}</MDXRenderer>
+            </div>
+        </Layout>
     )
 }
 

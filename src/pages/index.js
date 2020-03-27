@@ -1,22 +1,22 @@
 import React from "react"
 
-import Blog from "../components/blog"
-import Featured from "../components/featured"
-import Bio from "../components/bio"
+import "../styles/reset.css"
+import "../styles/fonts.css"
 
-import indexStyles from "../styles/indexStyles"
+import { ThemeProvider } from "react-jss"
+import theme from "../styles/theme"
+
+import Layout from "../layout/layout"
+
+import Main from "../components/main"
 
 const IndexPage = () => {
-    const classes = indexStyles()
-
     return (
-        <div className={classes.container}>
-            <div className={classes.topDiv}>
-                <Bio />
-            </div>
-            <Featured />
-            <Blog />
-        </div>
+        <ThemeProvider theme={theme}>
+            <Layout>
+                <Main />
+            </Layout>
+        </ThemeProvider>
     )
 }
 
