@@ -1,6 +1,4 @@
 import React from "react"
-import { ThemeProvider } from "react-jss"
-import theme from "./src/styles/theme"
 import { MDXProvider } from "@mdx-js/react"
 
 import { P, Code, CodeWrapper } from "./src/styles/mdx"
@@ -31,9 +29,7 @@ const components = {
 }
 
 export const wrapRootElement = ({ element }) => (
-    <ThemeProvider theme={theme}>
-        <MDXProvider components={components}>
-            <Layout>{element}</Layout>
-        </MDXProvider>
-    </ThemeProvider>
+    <MDXProvider components={components}>
+        <Layout>{element}</Layout>
+    </MDXProvider>
 )
