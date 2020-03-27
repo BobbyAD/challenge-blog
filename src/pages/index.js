@@ -1,6 +1,6 @@
 import React from "react"
 
-import SEO from "../components/seo"
+import Layout from "../layout/layout"
 import Blog from "../components/blog"
 import Featured from "../components/featured"
 import Bio from "../components/bio"
@@ -14,13 +14,15 @@ const IndexPage = () => {
     const classes = indexStyles()
 
     return (
-        <div className={classes.container}>
-            <div className={classes.topDiv}>
-                <Bio />
+        <Layout>
+            <div className={classes.container}>
+                <div className={classes.topDiv}>
+                    <Bio />
+                </div>
+                <Featured />
+                <Blog />
             </div>
-            <Featured />
-            <Blog />
-        </div>
+        </Layout>
     )
 }
 
